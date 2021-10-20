@@ -1,10 +1,10 @@
-#include <ctype.h>
-#include <math.h>
+#include "hexdump.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int width(int n) {
+static int width(int n) {
   if (n == 0) {
     return 1;
   }
@@ -51,18 +51,5 @@ int hexdump(void *buf, size_t len) {
   if ((len % row) != 0) {
     printf("%s %s\n", hex, ascii);
   }
-  return 0;
-}
-
-int main(int argc, char const *argv[]) {
-  int len = 1024;
-  char s[len];
-  for (int i = 0; i < len; i++) {
-    s[i] = 'A' + i;
-  }
-  if (hexdump((void *)s, sizeof(s)) == -1) {
-    fprintf(stderr, "hexdump() failed\n");
-  }
-  // DumpHex(s, sizeof(s));
   return 0;
 }
