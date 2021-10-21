@@ -38,7 +38,7 @@ int hexdump(const void *buf, size_t len) {
       ascii[i % row] = '.';
     }
     if (((i + 1) % row) == 0) {
-      printf("%s | %s\n", hex, ascii);
+      printf("%s  %s\n", hex, ascii);
       if (line % row == 0) {
         putchar('\n');
       }
