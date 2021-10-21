@@ -3,6 +3,6 @@
 
 #include <stdlib.h>
 
-int hexdump(void *buf, size_t len);
+int hexdump(const void *buf, size_t len);
 
 #endif

@@ -16,7 +16,7 @@ static int width(int n) {
   return res;
 }
 
-int hexdump(void *buf, size_t len) {
+int hexdump(const void *buf, size_t len) {
   if (buf == NULL && len == 0) {
     return -1;
   }
