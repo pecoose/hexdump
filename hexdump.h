@@ -6,3 +6,4 @@
 int hexdump(const void *buf, size_t len);
 
 #endif
+
