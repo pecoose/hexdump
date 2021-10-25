@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 int main(int argc, char const *argv[]) {
-  int len = 1024;
+  int len = 128 + 4;
   char s[len];
   for (int i = 0; i < len; i++) {
     s[i] = 'A' + i;

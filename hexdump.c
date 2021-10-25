@@ -48,9 +48,15 @@ int hexdump(const void *buf, size_t len) {
       line++;
     }
   }
-  if ((len % row) != 0) {
-    printf("%s %s\n", hex, ascii);
-  }
+	int diff = len % row;
+	if (diff != 0) {
+		printf("%s ", hex);
+		int tot = (row - diff) * 3 - 1;
+		for (int i = 0; i < tot; i++) {
+			putchar(' ');
+		}
+		printf("  %s\n", ascii);
+	}
   return 0;
 }
 
