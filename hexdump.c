@@ -55,6 +55,9 @@ int hexdump(const void *buf, size_t len) {
 		for (int i = 0; i < tot; i++) {
 			putchar(' ');
 		}
+		for (int i = diff; i < row; i++) {
+			ascii[i] = ' ';
+		}
 		printf("  %s\n", ascii);
 	}
 	return 0;
